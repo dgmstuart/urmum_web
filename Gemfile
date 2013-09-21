@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'sinatra'
 gem 'urmum'
 gem 'haml'
+gem 'sass'
 
 group :development, :test do
   gem 'rspec'

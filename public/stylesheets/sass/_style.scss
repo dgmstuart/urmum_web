@@ -1,0 +1,55 @@
+$button-colour: #258cd1;
+$white:         #fff;
+$grey:          #ccc;
+
+@mixin no-rounded-corners {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  min-width: 300px;
+  padding: 110px 20px 0;
+}
+
+.reply{
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+form {
+  margin-bottom: 40px;
+
+  input[type="text"] {
+    height: 41px;
+    width: 225px;
+    margin-right: 7px;
+
+    font-size: 18px;
+    padding-left: 8px;
+    background-color: $white;
+    border: 1px solid $grey;
+    vertical-align: bottom;
+  }
+
+  button {
+    width: 68px;
+    height: 41px;
+
+    @include no-rounded-corners;
+
+    font-size: 16px;
+    color: $white;
+    background: #5dade2;
+    padding: 11px 22px;
+
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  button:hover {
+    background: #258ace;
+  }
+}

@@ -17,12 +17,13 @@ __END__
 %html
   %head
     %title Urmum: an insulter
+    %link{rel: 'stylesheet', href: '/stylesheets/app.css'}
   %body
     = yield
 
 @@index
 %form{ action:"/", method: "post" } 
-  %input{ name: "input" }
-  %input{ type: "submit" }
+  %input{ name: "input", type: "text" }>
+  %button{ type: "submit" } GO
 - unless @reply.nil? || @reply ==""
   %p.reply= @reply
