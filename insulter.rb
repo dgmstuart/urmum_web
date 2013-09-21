@@ -20,6 +20,9 @@ __END__
     %link{rel: 'stylesheet', href: '/stylesheets/app.css'}
   %body
     = yield
+    %footer
+      %a{ href: "https://github.com/dgmstuart/urmum_web"} source on github 
+      (Sinatra)
 
 @@index
 %form{ action:"/", method: "post" } 

@@ -8,20 +8,26 @@ $grey:          #ccc;
   border-radius: 0;
 }
 
+@mixin side-padding {
+  padding: 0 20px;
+}
+
 body {
   font-family: Helvetica, sans-serif;
   text-align: center;
-  min-width: 300px;
-  padding: 110px 20px 0;
+  min-width: 340px;
+  min-height: 300px;
 }
 
 .reply{
   font-size: 40px;
   line-height: 1.2;
+  @include side-padding;
 }
 
 form {
-  margin-bottom: 40px;
+  margin: 110px 0 40px;
+  @include side-padding;
 
   input[type="text"] {
     height: 41px;
@@ -52,4 +58,17 @@ form {
   button:hover {
     background: #258ace;
   }
+}
+
+footer { 
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  
+  height: 20px;
+  padding: 10px 0;
+  background: white;
+
+  font-style: italic;
+  font-size: 14px;
 }
