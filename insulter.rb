@@ -17,6 +17,8 @@ __END__
 %html
   %head
     %title Urmum: an insulter
+    %meta{ name: "viewport",    content: "width=device-width", "initial-scale" => 1 }/
+    %meta{ name: "author",      content: "Duncan Stuart" }/
     %link{rel: 'stylesheet', href: '/stylesheets/app.css'}
   %body
     = yield

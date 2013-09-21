@@ -13,6 +13,8 @@ $grey:          #ccc;
 }
 
 body {
+  // Disable automatic font zooming:
+  -webkit-text-size-adjust: 100%;
   font-family: Helvetica, sans-serif;
   text-align: center;
   min-width: 340px;
