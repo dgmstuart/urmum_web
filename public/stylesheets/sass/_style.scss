@@ -17,8 +17,8 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: Helvetica, sans-serif;
   text-align: center;
-  min-width: 340px;
-  min-height: 300px;
+  min-width: 320px;
+  min-height: 200px;
 }
 
 .reply{
@@ -35,6 +35,8 @@ form {
     height: 41px;
     width: 225px;
     margin-right: 7px;
+
+    @include no-rounded-corners;
 
     font-size: 18px;
     padding-left: 8px;
