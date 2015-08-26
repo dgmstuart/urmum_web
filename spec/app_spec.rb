@@ -7,7 +7,7 @@ describe "The urmum site" do
 
   describe "get index" do
     subject (:get_index) { get '/' }
-    it { should be_ok }
+    it { is_expected.to be_ok }
     it "should render a form" do
       get_index
       expect(last_response.body).to include(%{<form action='/' method='post'>})
@@ -16,9 +16,9 @@ describe "The urmum site" do
   describe "post index" do
     context "when the post input is not nil" do
       subject (:post_fish) { post '/', input: 'fish' }
-      it { should be_ok }
-      it "should include a reply as a string" do  
-        post_fish 
+      it { is_expected.to be_ok }
+      it "should include a reply as a string" do
+        post_fish
         expect(last_response.body).to match(/<p class='reply'>.+<\/p>/)
       end
     end
@@ -26,7 +26,7 @@ describe "The urmum site" do
       subject (:post_nothing) { post '/' }
       it "should be ok" do
         post_nothing
-        last_response.status.should == 200
+        expect(last_response.status).to eq 200
       end
       it "should not include a reply as a string" do
         post_nothing
