@@ -15,7 +15,8 @@ end
 post '/api' do
   content_type :json
   reply = Insulter.new.insult_with(params[:text])
-  { "text" => "I say: #{reply}" }.to_json
+  username = params[:user_name] || "I say"
+  { "text" => "#{username}: #{reply}" }.to_json
 end
 
 __END__
