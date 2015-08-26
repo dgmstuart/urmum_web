@@ -11,8 +11,8 @@ post '/' do
   haml :index
 end
 
-get '/api' do
-  Insulter.new.insult_with(params[:input])
+post '/api' do
+  Insulter.new.insult_with(params[:text])
 end
 
 __END__
