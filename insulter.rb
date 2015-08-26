@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'urmum'
 require 'haml'
+require 'json'
 
 get '/' do
   haml :index
@@ -12,7 +13,9 @@ post '/' do
 end
 
 post '/api' do
-  Insulter.new.insult_with(params[:text])
+  content_type :json
+  reply = Insulter.new.insult_with(params[:text])
+  { "text" => reply }.to_json
 end
 
 __END__

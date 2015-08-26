@@ -11,12 +11,12 @@ describe "The urmum api" do
 
     it "should return a string" do
       post_api
-      expect(last_response.body).to eq(%{You're a noun})
+      expect(JSON(last_response.body)).to eq({ "text" => "You're a noun" })
     end
 
     it "handles input with quotes" do
       post "/api", { text: "You're a noun" }
-      expect(last_response.body).to eq(%{Your face is a noun})
+      expect(JSON(last_response.body)).to eq({ "text" => "Your face is a noun" })
     end
   end
 end

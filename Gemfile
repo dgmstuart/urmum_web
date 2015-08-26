@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'urmum'
 gem 'haml'
 gem 'sass'
+gem 'json'
 
 group :development, :test do
   gem 'rspec'
