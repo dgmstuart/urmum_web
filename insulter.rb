@@ -11,6 +11,10 @@ post '/' do
   haml :index
 end
 
+get '/api' do
+  Insulter.new.insult_with(params[:input])
+end
+
 __END__
 
 @@layout
@@ -23,11 +27,11 @@ __END__
   %body
     = yield
     %footer
-      %a{ href: "https://github.com/dgmstuart/urmum_web"} source on github 
+      %a{ href: "https://github.com/dgmstuart/urmum_web"} source on github
       (Sinatra)
 
 @@index
-%form{ action:"/", method: "post" } 
+%form{ action:"/", method: "post" }
   %input{ name: "input", type: "text" }>
   %button{ type: "submit" } GO
 - unless @reply.nil? || @reply ==""
